@@ -1,0 +1,72 @@
+<%- include('header'); -%>
+
+    <header>
+        <header>
+            <div class="bg-success d-flex flex-column">
+                <nav class="navbar navbar-expand my-2 p-0">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item mx-3">
+                                <a class="nav-item" href="home.html"><img src="onism_logo_small.png" alt="Onism" class="rounded" style="width: 120px;"></a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link text-white mt-auto" href="product.html"><h5>Products</h5></a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link text-white mt-auto" href="customize.html"><h5>Customize</h5></a>
+                            </li>
+                            <li class="nav-item mx-1">
+                                <a class="nav-link text-white mt-auto" href="story.html"><h5>Stories</h5></a>
+                            </li>
+                        </ul>
+                    <div class="d-flex">
+                        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#search">
+                            <img src="magnifying-glass.png" height="35px" alt="search">
+                        </button>
+                        <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#cart">
+                            <img src="shopping-cart.png" height="30px" alt="cart">
+                        </button>
+                        <div class="d-flex align-items-center">
+                            <a href="login.html" class="text-white text-decoration-none mx-3 text-center"><h5>Login</h5></a>
+                        </div>                       
+                    </div>
+                </nav>
+            </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h4 class="mt-5">Log in</h4>
+            <p>
+                Please enter your Email and <strong>6</strong> Pin numbers.
+            </p>
+
+            <div>
+                <form action="/memberlogin" method="post" id="memberlogin" class="mt-5 mb-4">
+                    <div class="row mb-3">
+                        <label for="email" class="col-sm-2 pt-2 col-form-label-sm text-sm-end">
+                            Email:
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="pin" class="col-sm-2 pt-2 col-form-label-sm text-sm-end">
+                            Pin:
+                        </label>
+                        <div class="col-sm-8">
+                            <input type="password" class="form-control" id="pin" name="pin" required pattern="[0-9]{6}">
+                        </div>
+                    </div>                    
+
+                    <div class="row mt-4">
+                        <div class="col-sm mx-auto d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success">Log in</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <%- include('footer'); -%>
